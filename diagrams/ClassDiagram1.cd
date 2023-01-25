@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Skydat.clasgraph" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HCAAEQAgQEARQYAQEAAGggAAMAJAAEAJQAwgBADBAQE=</HashCode>
+      <FileName>clasgraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.clasMain" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIwgAAQQACSAggEAAABAmABIAEnAAgAB8oEABARQJAA=</HashCode>
+      <FileName>clasMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.CV_params" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkACAAAEAACSAAAEAECACAAgAAAAAUAQAAAAAABAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.LSV_params" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAEAACSAAAEAECACAAgAAAAAUAQAAAAAABAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.DCS_params" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAEAACSAAAEAECACAAgAAAAAUAQAAAAAABAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.DCV_params" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAEAACSAAAEAECACAAgAAAAAUAQAAAAAABAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.NPV_params" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACEAAEAACSAAAEAECACAAgAAEAAUAQAAAAAABAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.DPV_params" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgADEAAECACSAAAEAECACAAgAAEAAUAQAAAAAABAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.SWV_params" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgADAAAECACSAAAEAACACAAgAIAAAUAQAAAAAACAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.DPS_params" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgADEAAECACSAAAEAECACAAgAAEAAUAQAAAAAABAEAQ=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.CPC_params" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAEAACACAAAAAAACQAQAAAAAAAAEgA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.CCC_params" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAACACAAAAAAACQEAAAAAAAAEEgA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.CA_params" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAEAACACAAAAAAACQAQAAAAAAAAEgA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.OCP_params" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.SC_params" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAACSAAAEAACACgAgAAAAAQAQBAAAAAAAEAA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.CCP_params" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAmAYAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.Color_params" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAEAAAAAIAAAgAQAAAAgQAABAAIAAAAgIAAA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.FRA_params" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAEAAAggAQAAAEAAAIEgEIBAAIAA=</HashCode>
+      <FileName>clasParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.clasPeak" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAACAeEAAAAAAEAAAAACAAAgSCAUAAABAAAI=</HashCode>
+      <FileName>clasPeak.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.clasSmooth" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAABAEAAAAABAAgAAAAEAAIAAAAA=</HashCode>
+      <FileName>clasSmooth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmAbout" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/QAAAAAAACAAABAAAASAAAACAAAoAAAAAEAACQBAKDA=</HashCode>
+      <FileName>frmAbout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmAppSelection" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACSBBABAAAACAAAACAAAIAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>frmAppSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmClbCurve" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9yCQAAAAACAAA1ACAADggAACgMA7AAACAnAMbQMQDAA=</HashCode>
+      <FileName>frmClbCurve.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmColorSelect" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQgAAAACAAAACAAAAAAAQAAAACAAAAAA=</HashCode>
+      <FileName>frmColorSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmData" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAgAAAACAAAAKAAQIAAAAAWAAAQEAAAw=</HashCode>
+      <FileName>frmData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmFRAMain" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>dAQAEG0IACAECDAARCSAwgdiQCIDAAgEAJAkAQIAAAk=</HashCode>
+      <FileName>frmFRAMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmGraph" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>E0ACJAOgAKEEkohDAgixEQEKAwCZGoSUKeyGQZoGB1A=</HashCode>
+      <FileName>frmGraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmHelp" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACACAACAAAIAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>frmHelp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmMain" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/0/x/+/fuypX07P7933v3/r///v7/+vV8/e+/b+/v/8=</HashCode>
+      <FileName>frmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmMath" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEBIAAAGYAggBAgAWICAACAAA4IAAAAOSEABAAAAA=</HashCode>
+      <FileName>frmMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmMathematical" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAAAAASAAAACAAACAAABCIAYYAAAAECAAAAAAAII=</HashCode>
+      <FileName>frmMathematical.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmOption" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>30AIBEAQNCAgghAAwICAEABCIgAqAUgQCHAxSAQAADA=</HashCode>
+      <FileName>frmOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmPortOption" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAgCAAABACAACAAAAKAAA4AAAAgHAJAAAAAAA=</HashCode>
+      <FileName>frmPortOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmRDECtrl" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAEAAECAAAhAAACCAAgACACAAgQAAkBQAABBAAAA=</HashCode>
+      <FileName>frmRDECtrl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmRegister" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAASAAAACAAA4AAAAEAAAAAAAAAA=</HashCode>
+      <FileName>frmRegister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmShowPeaks" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQJgAAECAAACEAAACQBQCCACAIAAAAAGAQIQAAAAA=</HashCode>
+      <FileName>frmShowPeaks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmSmoothing" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAYAAAAAGAAAQAAgAI=</HashCode>
+      <FileName>frmSmoothing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.frmstdAddition" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9SCQAAAAACEAAVACAADggAACgMA7AAICEnAMPQEQBAA=</HashCode>
+      <FileName>frmstdAddition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.Program" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAICDJOyALEABsUCNFCggiYQAyBAA4RgBAB3AAJo=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skydat.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAIAAAAAABAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
