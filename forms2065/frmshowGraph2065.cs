@@ -33,8 +33,8 @@ namespace Skydat.forms2065
         public frmshowGraph2065()
         {
             InitializeComponent();
-            serialPort2.PortName = Properties.Settings.Default.portname;
-            serialPort2.BaudRate = int.Parse(Properties.Settings.Default.baudrate);
+            //serialPort2.PortName = Properties.Settings.Default.portname;
+            //serialPort2.BaudRate = int.Parse(Properties.Settings.Default.baudrate);
 
             tChart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
