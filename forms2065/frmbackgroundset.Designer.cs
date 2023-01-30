@@ -185,6 +185,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "form background Settings";
+            this.Load += new System.EventHandler(this.frmbackgroundset_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.panel1.ResumeLayout(false);

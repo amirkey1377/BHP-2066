@@ -27,7 +27,7 @@ namespace Skydat.forms2065
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmbackgroundset frm = new frmbackgroundset(this,1);
+            frmbackgroundset frm = new frmbackgroundset(this,5);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
            
@@ -51,9 +51,9 @@ namespace Skydat.forms2065
             //if (Skydat.Properties.Settings.Default.backimg.Trim() != "")
             //    this.BackgroundImage = GetImage(Skydat.Properties.Settings.Default.backimg);
 
-            pictureBox1.Controls.Add(label1);
-            label1.Location = new Point(10, ((this.Height - 100) - 80));
-            label1.BackColor = Color.Transparent;
+            //pictureBox1.Controls.Add(label1);
+            //label1.Location = new Point(10, ((this.Height - 100) - 80));
+            //label1.BackColor = Color.Transparent;
 
 
             try  {   pictureBox1.Image = Image.FromFile(Application.StartupPath + "\\back.jpg"); }catch { }
@@ -143,7 +143,32 @@ namespace Skydat.forms2065
 
         private void frmbase_SizeChanged(object sender, EventArgs e)
         {
-            label1.Location = new Point(10, ((this.Height - 100) - 80));
+            //label1.Location = new Point(10, ((this.Height - 100) - 80));
+        }
+
+        private void toolStripSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

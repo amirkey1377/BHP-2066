@@ -793,6 +793,7 @@
     <Content Include="CHEM1.ICO" />
     <Content Include="forms2065\Bitmap1.bmp" />
     <Content Include="Resources\165.png" />
+    <None Include="Resources\لوگوی سایت.png" />
     <None Include="Resources\activity_grid21600.png" />
     <None Include="Resources\Pause-icon.png" />
     <None Include="Resources\Play-icon.png" />
@@ -807,6 +808,9 @@
     <None Include="Resources\Document-write-icon2.png" />
     <None Include="Resources\Aqua-Smooth-Folder-Applications-icon.png" />
     <None Include="Resources\color.png" />
+    <None Include="Resources\iconBehpajooh.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Full logo.png" />
     <Content Include="Resources\zoomin.ico" />
     <Content Include="Resources\Zoomout.ico" />
     <None Include="Resources\2000px-Tangent_to_a_curve.svg.png" />

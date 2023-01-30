@@ -19,7 +19,7 @@ namespace Skydat.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -733,6 +733,16 @@ namespace Skydat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Full_logo {
+            get {
+                object obj = ResourceManager.GetObject("Full logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hard_disk_32 {
             get {
                 object obj = ResourceManager.GetObject("hard_disk_32", resourceCulture);
@@ -757,6 +767,16 @@ namespace Skydat.Properties {
             get {
                 object obj = ResourceManager.GetObject("Icon1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconBehpajooh {
+            get {
+                object obj = ResourceManager.GetObject("iconBehpajooh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -846,6 +866,16 @@ namespace Skydat.Properties {
         internal static System.Drawing.Bitmap Log_Out_icon {
             get {
                 object obj = ResourceManager.GetObject("Log_Out_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1437,6 +1467,36 @@ namespace Skydat.Properties {
             get {
                 object obj = ResourceManager.GetObject("Zoomout", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap لوگوی_سایت {
+            get {
+                object obj = ResourceManager.GetObject("لوگوی سایت", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap لوگوی_سایت1 {
+            get {
+                object obj = ResourceManager.GetObject("لوگوی سایت1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap لوگوی_سایت2 {
+            get {
+                object obj = ResourceManager.GetObject("لوگوی سایت2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
