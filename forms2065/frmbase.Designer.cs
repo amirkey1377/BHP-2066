@@ -53,10 +53,8 @@
             this.toolStripLabel11 = new System.Windows.Forms.ToolStripLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -319,17 +317,6 @@
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(23, 23);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Skydat.Properties.Resources.لوگوی_سایت2;
-            this.pictureBox2.Location = new System.Drawing.Point(76, 463);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(376, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            // 
             // frmbase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,7 +324,6 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 696);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -350,7 +336,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,6 +364,5 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel11;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
