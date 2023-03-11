@@ -33,8 +33,15 @@ namespace Skydat.forms2065
         public frmshowGraph2065()
         {
             InitializeComponent();
-            //serialPort2.PortName = Properties.Settings.Default.portname;
-            //serialPort2.BaudRate = int.Parse(Properties.Settings.Default.baudrate);
+            try
+            {
+                serialPort2.PortName = Properties.Settings.Default.portname;
+                serialPort2.BaudRate = int.Parse(Properties.Settings.Default.baudrate);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("لطفا پورت سریال خود را به درستی انتخاب کنید");
+            }
 
             tChart1.ChartAreas[0].Area3DStyle.Enable3D = false;
 
@@ -2740,6 +2747,11 @@ namespace Skydat.forms2065
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

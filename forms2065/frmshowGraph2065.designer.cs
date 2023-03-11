@@ -31,8 +31,8 @@ namespace Skydat.forms2065
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmshowGraph2065));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.treeView3 = new System.Windows.Forms.TreeView();
             this.dschart1 = new Skydat.datasets.Dschart1();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -199,19 +199,19 @@ namespace Skydat.forms2065
             this.tChart1.BackColor = System.Drawing.Color.Black;
             this.tChart1.BorderlineColor = System.Drawing.Color.Black;
             this.tChart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            chartArea3.Name = "ChartArea1";
-            chartArea3.Position.Auto = false;
-            chartArea3.Position.Height = 100F;
-            chartArea3.Position.Width = 100F;
-            this.tChart1.ChartAreas.Add(chartArea3);
+            chartArea1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 100F;
+            chartArea1.Position.Width = 100F;
+            this.tChart1.ChartAreas.Add(chartArea1);
             resources.ApplyResources(this.tChart1, "tChart1");
             this.tChart1.Name = "tChart1";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series3.Name = "Series1";
-            this.tChart1.Series.Add(series3);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series1.Name = "Series1";
+            this.tChart1.Series.Add(series1);
             this.tChart1.PostPaint += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs>(this.tChart1_PostPaint);
             this.tChart1.Click += new System.EventHandler(this.tChart1_Click);
             this.tChart1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tChart1_MouseMove);
@@ -227,6 +227,7 @@ namespace Skydat.forms2065
             this.panel3.ForeColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label4
             // 

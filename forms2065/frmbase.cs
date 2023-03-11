@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using Skydat;
+using System.Diagnostics;
 
 namespace Skydat.forms2065
 {
@@ -169,6 +170,11 @@ namespace Skydat.forms2065
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe", "http://keighobadiamir.ir/");
         }
     }
 }

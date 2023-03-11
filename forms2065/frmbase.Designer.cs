@@ -293,6 +293,7 @@
             this.toolStripButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.ToolTipText = "About";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripLabel11
             // 
