@@ -702,7 +702,8 @@ namespace Skydat.forms2065
 
             }
         }
-     
+
+
         unsafe private void doRun2(int row)
         {
             byte[] datas = new byte[3];
@@ -716,7 +717,7 @@ namespace Skydat.forms2065
             byte* InBuff = &num2;
             string string1;
             byte end = 0;
-            int counter = 0,number=0,number2=0;
+            int counter = 0, number = 0, number2 = 0;
             //byte[] data = new byte[65520];//قبلا این مقادیر بود اما اگر تعداد سیکل ها بالا رود رویداد این پارامترها رفرش نمیشود بنابراین هر سیکل در ادامه هم ذخیره میشد و نهایتا اگر از تعداد آرایه بالا میزد خطا میداد
             //byte[] Powr = new Byte[32710];
             //double[] Crnt = new double[32710];
@@ -756,13 +757,15 @@ namespace Skydat.forms2065
                 Setbtnenabled(true, 1, 2);
                 // serialPort2.WriteLine("start");
                 number = serialPort2.BytesToRead;
+                //Settxtfill_func(2, "wait", 2, 1);
                 if (number >= 0)
                 {
-                    
+
                     try
-                   {
+                    {
 
                         string1 = serialPort2.ReadLine();
+                        // Settxtfill_func(2, "start", 2, 1);
                         //string1.Remove(string1.Length-1);
                         if (sign == 0)
                         {
@@ -1030,282 +1033,283 @@ namespace Skydat.forms2065
 
 
                 }
-      if (sign == 1) {
-                    if(fst) //IF fst TRUE 
+                if (sign == 1)
                 {
-                    Powr[j] = datas[2];//SAVE IN BUFFER 
-                    Crnt[j] = ((datas[0] << 6) | (datas[1] >> 2)); //???
-                                                                   // Settxtfill_func(2, $"power={Powr[j]},{oinp}", 2, 1);
-                    if (Crnt[j] > 0x1FFF)//0x1fff = 8191 
+                    if (fst) //IF fst TRUE 
                     {
-                        Crnt[j] = (0x4000 - Crnt[j]);//16384 - current ->negative current
-                        signe[j] = true;
-                    }
-                    else
-                        signe[j] = false;
-                    if (Range1 != 0)
-                        if ((int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) < 8) && (Crnt[j] > 6560))//if techno dcv,npv,dpv,swv,cv,lsv,dcs,dps && current >6560
-                            Crnt[j] = 6560;//current 6560
-                    if ((int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 9) && (Powr[j] == 8)) //if tecno cpc or ccc
-                        Crnt[j] = Crnt[j] * 2; //current upto 1A
-                }
-                else//if fst false ??
-                {// for tecno under 8
-                    Po[h] = datas[2];//save power in arry po
-                    Crn[h] = ((datas[0] << 6) | (datas[1] >> 2));
-                    if (Crn[h] > 0x1FFF)
-                    {
-                        Crn[h] = (0x4000 - Crn[h]);
-                        Crn[h] = Crn[h] * -1;
-                    }
-                        sign = 0;
-                        Settxtfill_func(2, $"test1{h}", 2, 1);
-                    h++;
-                    if (h == 5)
-                    {
-                        
-                        i++;
-                        Settxtfill_func(2, $"test2{i}", 2, 1);
-                        Itot = (Crn[0] * Math.Pow(10, Po[0] - Po[4]) + Crn[1] * Math.Pow(10, Po[1] - Po[4]) + Crn[2] * Math.Pow(10, Po[2] - Po[4]) + Crn[3] * Math.Pow(10, Po[3] - Po[4]) + Crn[4]) / 5;
-                        Powr[j] = Po[4];
-                        Crnt[j] = Math.Round(Itot, 2);//////trunc(Itot);
-                        if (Crnt[j] > 6560)
+                        Powr[j] = datas[2];//SAVE IN BUFFER 
+                        Crnt[j] = ((datas[0] << 6) | (datas[1] >> 2)); //???
+                                                                       // Settxtfill_func(2, $"power={Powr[j]},{oinp}", 2, 1);
+                        if (Crnt[j] > 0x1FFF)//0x1fff = 8191 
                         {
-                            Crnt[j] = Crnt[j] / 10;
-                            Powr[j]++;
-                        }
-                        if (Crnt[j] < 0)
-                        {
-                            Crnt[j] = Crnt[j] * -1;
+                            Crnt[j] = (0x4000 - Crnt[j]);//16384 - current ->negative current
                             signe[j] = true;
                         }
                         else
                             signe[j] = false;
-                        S_et = true;
+                        if (Range1 != 0)
+                            if ((int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) < 8) && (Crnt[j] > 6560))//if techno dcv,npv,dpv,swv,cv,lsv,dcs,dps && current >6560
+                                Crnt[j] = 6560;//current 6560
+                        if ((int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 9) && (Powr[j] == 8)) //if tecno cpc or ccc
+                            Crnt[j] = Crnt[j] * 2; //current upto 1A
                     }
-                }
-
-                if (S_et) //if s_et ==true ??   ->for tecno cpc
-                {
-
-                    if ((Powr[j] == 8) && (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) != 9))
-                    {//techno <8 and >9
-
-                        C[j] = Crnt[j] * 1.02207 * Math.Pow(10, Powr[j]);/////// - 6
-                    }
-                    else
-                    {
-                        C[j] = Crnt[j] * 0.61035 * Math.Pow(10, Powr[j] - 6); ////- 6  -> for cpc
-                                                                              //Settxtfill_func(2, $"flag1={C[j]},range{Powr[j]} ", 2, 1);
-                    }
-                    if (signe[j] ^ (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 10))
-                        C[j] = C[j] * -1;
-
-                    if (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) < 8)//if techno == dcv,npv,dpv,swv,cv,lsv,dcs,dps,
-                    {
-                        //////mn////////////if (Xinv)
-                        //////mn////////////    C[j] = C[j] * -1;//در گراف سی وی اگر ولتاژ از بزرگ به کوچک برود جریان را منفی نمی کند
-
-                        if (pulsy) //if pulsy ==true
+                    else//if fst false ??
+                    {// for tecno under 8
+                        Po[h] = datas[2];//save power in arry po
+                        Crn[h] = ((datas[0] << 6) | (datas[1] >> 2));
+                        if (Crn[h] > 0x1FFF)
                         {
-                            if (!evn)//
+                            Crn[h] = (0x4000 - Crn[h]);
+                            Crn[h] = Crn[h] * -1;
+                        }
+                        sign = 0;
+                        Settxtfill_func(2, $"test1{h}", 2, 1);
+                        h++;
+                        if (h == 5)
+                        {
+
+                            i++;
+                            Settxtfill_func(2, $"test2{i}", 2, 1);
+                            Itot = (Crn[0] * Math.Pow(10, Po[0] - Po[4]) + Crn[1] * Math.Pow(10, Po[1] - Po[4]) + Crn[2] * Math.Pow(10, Po[2] - Po[4]) + Crn[3] * Math.Pow(10, Po[3] - Po[4]) + Crn[4]) / 5;
+                            Powr[j] = Po[4];
+                            Crnt[j] = Math.Round(Itot, 2);//////trunc(Itot);
+                            if (Crnt[j] > 6560)
                             {
-                                if (ngtv) //if ngtv == true
+                                Crnt[j] = Crnt[j] / 10;
+                                Powr[j]++;
+                            }
+                            if (Crnt[j] < 0)
+                            {
+                                Crnt[j] = Crnt[j] * -1;
+                                signe[j] = true;
+                            }
+                            else
+                                signe[j] = false;
+                            S_et = true;
+                        }
+                    }
+
+                    if (S_et) //if s_et ==true ??   ->for tecno cpc
+                    {
+
+                        if ((Powr[j] == 8) && (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) != 9))
+                        {//techno <8 and >9
+
+                            C[j] = Crnt[j] * 1.02207 * Math.Pow(10, Powr[j]);/////// - 6
+                        }
+                        else
+                        {
+                            C[j] = Crnt[j] * 0.61035 * Math.Pow(10, Powr[j] - 6); ////- 6  -> for cpc
+                                                                                  //Settxtfill_func(2, $"flag1={C[j]},range{Powr[j]} ", 2, 1);
+                        }
+                        if (signe[j] ^ (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 10))
+                            C[j] = C[j] * -1;
+
+                        if (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) < 8)//if techno == dcv,npv,dpv,swv,cv,lsv,dcs,dps,
+                        {
+                            //////mn////////////if (Xinv)
+                            //////mn////////////    C[j] = C[j] * -1;//در گراف سی وی اگر ولتاژ از بزرگ به کوچک برود جریان را منفی نمی کند
+
+                            if (pulsy) //if pulsy ==true
+                            {
+                                if (!evn)//
                                 {
-                                    I1 = C[j];
-                                    I2 = C[j - 1];
-                                    //  I1 = C[j] - C[j - 1];
-                                    // I2 = 0;
+                                    if (ngtv) //if ngtv == true
+                                    {
+                                        I1 = C[j];
+                                        I2 = C[j - 1];
+                                        //  I1 = C[j] - C[j - 1];
+                                        // I2 = 0;
+                                    }
+                                    else  ////if ngtv == false
+                                    {
+                                        I2 = C[j];
+                                        I1 = C[j - 1];
+                                        //I1 = C[j - 1] - C[j];
+                                        // I2 = 0;
+                                    }
+                                    // Addxy(V1,I0,'',Colr[cl])
                                 }
-                                else  ////if ngtv == false
+                            }
+                            else//if pulsy == false
+                            {
+                                I1 = C[j];
+                                I2 = 0;
+
+                            }
+
+
+                            int numdigit = dschart1.chartlist1_run.Rows[row][6].ToString().Length - dschart1.chartlist1_run.Rows[row][6].ToString().IndexOf('.') - 1;// calculate digit number in of heght step
+                            if (!(pulsy && evn))
+                                if (N_gtv)
                                 {
-                                    I2 = C[j];
-                                    I1 = C[j - 1];
-                                    //I1 = C[j - 1] - C[j];
-                                    // I2 = 0;
+                                    Vold = V;
+                                    V = Math.Round(V - double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString()), numdigit);
                                 }
-                                // Addxy(V1,I0,'',Colr[cl])
+                                else
+                                {
+                                    Vold = V;
+                                    V = Math.Round(V + double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString()), numdigit);
+                                }
+
+                            if (!fst)
+                            {
+                                h = 0;
+                                S_et = false;
+                            }
+
+                            j++;
+                            evn = !evn;
+
+
+                            if (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 4)// if techno ==   cv
+                            {
+                                if (double.Parse(dschart1.chartlist1_run.Rows[row][3].ToString()) < double.Parse(dschart1.chartlist1_run.Rows[row][4].ToString())) //if (e1<e2)
+                                {
+                                    if (V >= double.Parse(dschart1.chartlist1_run.Rows[row][4].ToString())) // if v>e2
+                                    {
+                                        back_direction = true;
+                                        N_gtv = !N_gtv;
+                                        fst = fst2;
+                                        if (fst)
+                                            S_et = true;
+                                        else
+                                            S_et = false;
+                                    }
+
+
+                                    if (V < Elo && back_direction)
+                                    {
+                                        dschart1.chartlist1_run.Rows[row][13] = int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) - 1;// cycle = cycle-1
+                                        if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) >= 0) //if cycle >= 0
+                                        {
+                                            E_nd = true;
+                                            countcv++;
+
+                                            if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) > 0)
+                                                number_runing_cv++;              //mn
+                                        }
+                                    }
+                                }
+                                else//if e1>e2
+                                {
+                                    if (V <= double.Parse(dschart1.chartlist1_run.Rows[row][4].ToString()))//if v<=e2
+                                    {
+                                        back_direction = true;
+                                        N_gtv = !N_gtv;
+                                        fst = fst2;
+                                        if (fst)
+                                            S_et = true;
+                                        else
+                                            S_et = false;
+                                    }
+
+                                    if (V > Elo && back_direction)
+                                    {
+                                        dschart1.chartlist1_run.Rows[row][13] = int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) - 1;
+                                        if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) >= 0)
+                                        {
+                                            E_nd = true;
+                                            countcv++;
+
+                                            if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) > 0)
+                                                number_runing_cv++;        //mn2
+                                        }
+                                    }
+                                }
                             }
                         }
-                        else//if pulsy == false
-                        {
-                            I1 = C[j];
-                            I2 = 0;
+                        else
+                        {// techno ccc,cpc,chp,cha,chc
 
+                            if (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 12)//if techno ==chc
+                                I1 = I1 + C[j] * ti;
+                            else//techno ...
+                                I1 = C[j]; // Addxy(V1,C[j],'',Colr[cl]);
+                            I2 = 0;
+                            Vold = V;
+                            V = V + ti;
+                            sign = 0;
+                            j++;
                         }
 
 
-                        int numdigit = dschart1.chartlist1_run.Rows[row][6].ToString().Length - dschart1.chartlist1_run.Rows[row][6].ToString().IndexOf('.') - 1;// calculate digit number in of heght step
-                        if (!(pulsy && evn))
+                        if (pulsy)
+                        {
+                            if (evn)
+                            {
+                                Runnig2(Vold, I1, I2, row);///// رسم گراف اصلی
+                                                           //Settxtfill_func(2, $"1={Vold}:{I1}:{I2} ", 2, 1);
+                                Settxtfill_func(2, $"vold1{Vold}", 2, 1);
+
+                            }
+                        }
+                        else
+                        {
+                            Settxtfill_func(2, $"vold2{Vold}", 2, 1);
+                            Runnig2(Vold, I1, I2, row);///// رسم گراف اصلی
+                                                       //Settxtfill_func(2, $"2={Vold}:{I1}:{I2} ", 2, 1);
+
+                        }
+
+                        if (E_nd)
+                        {
+                            transferdata(row, 1);
+                            double temp1, temp2, temp3, temp4;
+                            temp1 = othertech_val0[shomar_othertech - 1];
+                            temp2 = othertech_val1[shomar_othertech - 1];
+                            temp3 = othertech_val2[shomar_othertech - 1];
+                            temp4 = othertech_val3[shomar_othertech - 1];
+                            smootht4(row, tChart1.Series[0].Color);
+                            Setgrfnodetext(row, 2, 1);
+                            show_cycle_runing_CV(number_runing_cv);//show number running in toolStripStatusLabel5
+                            if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) > 0)//cycle >0
+                            {
+                                shomar_othertech = 1;
+
+                                Array.Clear(othertech_val0, 1, othertech_val0.Length - 1);
+                                Array.Clear(othertech_val1, 1, othertech_val1.Length - 1);
+                                Array.Clear(othertech_val2, 1, othertech_val2.Length - 1);
+                                Array.Clear(othertech_val3, 1, othertech_val3.Length - 1);
+                                othertech_val0[0] = temp1;
+                                othertech_val1[0] = temp2;
+                                othertech_val2[0] = temp3;
+                                othertech_val3[0] = temp4;
+                                Setgrfnodetext(row, 4, 1);
+                                show_cycle_runing_CV(number_runing_cv);//show number running in toolStripStatusLabel5
+                            }
+                            else if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) == 0) // cycle =0
+                                countcv = 0;
+
+                            fst = fst1;
+                            if (fst)
+                                S_et = true;
+                            else
+                                S_et = false;
+
+                            N_gtv = !N_gtv;
                             if (N_gtv)
                             {
-                                Vold = V;
-                                V = Math.Round(V - double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString()), numdigit);
+                                V = double.Parse(dschart1.chartlist1_run.Rows[row][3].ToString()) - double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString());//v =e1-hs
                             }
                             else
                             {
-                                Vold = V;
-                                V = Math.Round(V + double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString()), numdigit);
+                                V = double.Parse(dschart1.chartlist1_run.Rows[row][3].ToString()) + double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString());//v=e1+hs
                             }
 
-                        if (!fst)
-                        {
-                            h = 0;
-                            S_et = false;
+                            E_nd = false;
+                            back_direction = false;
                         }
 
-                        j++;
-                        evn = !evn;
-
-
-                        if (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 4)// if techno ==   cv
-                        {
-                            if (double.Parse(dschart1.chartlist1_run.Rows[row][3].ToString()) < double.Parse(dschart1.chartlist1_run.Rows[row][4].ToString())) //if (e1<e2)
-                            {
-                                if (V >= double.Parse(dschart1.chartlist1_run.Rows[row][4].ToString())) // if v>e2
-                                {
-                                    back_direction = true;
-                                    N_gtv = !N_gtv;
-                                    fst = fst2;
-                                    if (fst)
-                                        S_et = true;
-                                    else
-                                        S_et = false;
-                                }
-
-
-                                if (V < Elo && back_direction)
-                                {
-                                    dschart1.chartlist1_run.Rows[row][13] = int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) - 1;// cycle = cycle-1
-                                    if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) >= 0) //if cycle >= 0
-                                    {
-                                        E_nd = true;
-                                        countcv++;
-
-                                        if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) > 0)
-                                            number_runing_cv++;              //mn
-                                    }
-                                }
-                            }
-                            else//if e1>e2
-                            {
-                                if (V <= double.Parse(dschart1.chartlist1_run.Rows[row][4].ToString()))//if v<=e2
-                                {
-                                    back_direction = true;
-                                    N_gtv = !N_gtv;
-                                    fst = fst2;
-                                    if (fst)
-                                        S_et = true;
-                                    else
-                                        S_et = false;
-                                }
-
-                                if (V > Elo && back_direction)
-                                {
-                                    dschart1.chartlist1_run.Rows[row][13] = int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) - 1;
-                                    if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) >= 0)
-                                    {
-                                        E_nd = true;
-                                        countcv++;
-
-                                        if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) > 0)
-                                            number_runing_cv++;        //mn2
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {// techno ccc,cpc,chp,cha,chc
-
-                        if (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 12)//if techno ==chc
-                            I1 = I1 + C[j] * ti;
-                        else//techno ...
-                            I1 = C[j]; // Addxy(V1,C[j],'',Colr[cl]);
-                        I2 = 0;
-                        Vold = V;
-                        V = V + ti;
-                            sign = 0;
-                        j++;
-                    }
-
-
-                    if (pulsy)
-                    {
-                        if (evn)
-                        {
-                            Runnig2(Vold, I1, I2, row);///// رسم گراف اصلی
-                                                       //Settxtfill_func(2, $"1={Vold}:{I1}:{I2} ", 2, 1);
-                            Settxtfill_func(2, $"vold1{Vold}", 2, 1);
-                            
-                        }
-                    }
-                    else
-                    {
-                        Settxtfill_func(2, $"vold2{Vold}", 2, 1);
-                        Runnig2(Vold, I1, I2, row);///// رسم گراف اصلی
-                                                   //Settxtfill_func(2, $"2={Vold}:{I1}:{I2} ", 2, 1);
-                        
-                    }
-
-                    if (E_nd)
-                    {
-                        transferdata(row, 1);
-                        double temp1, temp2, temp3, temp4;
-                        temp1 = othertech_val0[shomar_othertech - 1];
-                        temp2 = othertech_val1[shomar_othertech - 1];
-                        temp3 = othertech_val2[shomar_othertech - 1];
-                        temp4 = othertech_val3[shomar_othertech - 1];
-                        smootht4(row, tChart1.Series[0].Color);
-                        Setgrfnodetext(row, 2, 1);
-                        show_cycle_runing_CV(number_runing_cv);//show number running in toolStripStatusLabel5
-                        if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) > 0)//cycle >0
-                        {
-                            shomar_othertech = 1;
-
-                            Array.Clear(othertech_val0, 1, othertech_val0.Length - 1);
-                            Array.Clear(othertech_val1, 1, othertech_val1.Length - 1);
-                            Array.Clear(othertech_val2, 1, othertech_val2.Length - 1);
-                            Array.Clear(othertech_val3, 1, othertech_val3.Length - 1);
-                            othertech_val0[0] = temp1;
-                            othertech_val1[0] = temp2;
-                            othertech_val2[0] = temp3;
-                            othertech_val3[0] = temp4;
-                            Setgrfnodetext(row, 4, 1);
-                            show_cycle_runing_CV(number_runing_cv);//show number running in toolStripStatusLabel5
-                        }
-                        else if (int.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) == 0) // cycle =0
-                            countcv = 0;
-
-                        fst = fst1;
-                        if (fst)
-                            S_et = true;
-                        else
-                            S_et = false;
-
-                        N_gtv = !N_gtv;
-                        if (N_gtv)
-                        {
-                            V = double.Parse(dschart1.chartlist1_run.Rows[row][3].ToString()) - double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString());//v =e1-hs
-                        }
-                        else
-                        {
-                            V = double.Parse(dschart1.chartlist1_run.Rows[row][3].ToString()) + double.Parse(dschart1.chartlist1_run.Rows[row][6].ToString());//v=e1+hs
-                        }
-
-                        E_nd = false;
-                        back_direction = false;
-                    }
-
-                } //if S_et
-                  ///////////////////////////////////////          
-            }
+                    } //if S_et
+                      ///////////////////////////////////////          
+                }
                 else if (end == 1)  //if portc=0x09
                 {
 
 
                     end = 0;
-                    
+
                     serialPort2.Close();
                     System.Threading.Thread.Sleep(1000 * Convert.ToInt32(this.dschart1.chartlist1_run.Rows[row]["qt"].ToString()));//delay with equlibirum time
                                                                                                                                    // System.Threading.Thread.Sleep(int.Parse(this.dschart1.chartlist.Rows[row][7].ToString()));
@@ -1315,25 +1319,25 @@ namespace Skydat.forms2065
                     return;
                 }
                 // other input portc 
-                
-                    //if (outc == 0x60)
-                    //    thread_grf.Suspend();
-                    if (outc == 0xA0)//if software ==pause 
-                    {
 
-                        //Settxtfill_func(1, $"goodbay{oinp}", 2, 1);
+                //if (outc == 0x60)
+                //    thread_grf.Suspend();
+                if (outc == 0xA0)//if software ==pause 
+                {
 
-                        serialPort2.Write("stop");
-                        System.Threading.Thread.Sleep(100);
-                        serialPort2.Close();
-                            detect_Error = true;
-                            Setbtnenabled(true, 2, 1);
-                            Settxtfill_func(1, "finish running-2", 2, 1);
+                    //Settxtfill_func(1, $"goodbay{oinp}", 2, 1);
 
-                            return;
-                        
-                    }
-                
+                    serialPort2.Write("stop");
+                    System.Threading.Thread.Sleep(100);
+                    serialPort2.Close();
+                    detect_Error = true;
+                    Setbtnenabled(true, 2, 1);
+                    Settxtfill_func(1, "finish running-2", 2, 1);
+
+                    return;
+
+                }
+
 
             }
         }
