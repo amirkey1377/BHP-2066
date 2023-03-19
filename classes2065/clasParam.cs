@@ -1829,14 +1829,16 @@ namespace Skydat.classes2065
     {
         //private double _Cycles;
         private double _I1;
-        private double _CYCLE;
+        // private double _CYCLE;
         private double _I2;
         private double _EUP;
         private double _EDO;
+        private double _T1;
+        private double _T2;
         private double _EquilibriumTime;
         private string _comment1;
 
-        [CategoryAttribute("Cd Values"), DescriptionAttribute("First current step(mA)\n -150    +150")]
+        [CategoryAttribute("Cd Values"), DescriptionAttribute("First current step(mA)\n -360    +360")]
         public double I1
         {
             get
@@ -1849,20 +1851,7 @@ namespace Skydat.classes2065
                 _I1 = value;
             }
         }
-        [CategoryAttribute("Cd Values"), DescriptionAttribute("CYCLE(S)\n 1    999")]
-        public double CYCLE
-        {
-            get
-            {
-                return _CYCLE;
-            }
-            set
-            {
-                _CYCLE = value;
-            }
-        }
-
-        [CategoryAttribute("Cd Values"), DescriptionAttribute("Second current step(mA)\n -150    +150")]
+        [CategoryAttribute("Cd Values"), DescriptionAttribute("Second current step(mA)\n -360    +360")]
         public double I2
         {
             get
@@ -1874,7 +1863,34 @@ namespace Skydat.classes2065
                 _I2 = value;
             }
         }
-       
+
+        [CategoryAttribute("CD Values"), DescriptionAttribute("First step time(S)\n 1    32000")]
+        public double T1
+        {
+            get
+            {
+                return _T1;
+            }
+
+            set
+            {
+                _T1 = value;
+            }
+        }
+        [CategoryAttribute("CD Values"), DescriptionAttribute("First step time(S)\n 1    32000")]
+        public double T2
+        {
+            get
+            {
+                return _T2;
+            }
+
+            set
+            {
+                _T2 = value;
+            }
+        }
+
         [CategoryAttribute("Cd Values"), DescriptionAttribute("Higger cutoff voltage(V)")]
         public double EUP
         {
