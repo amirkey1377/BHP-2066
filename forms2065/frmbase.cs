@@ -174,7 +174,7 @@ namespace Skydat.forms2065
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            Process.Start("chrome.exe", "http://keighobadiamir.ir/");
+            Process.Start("chrome.exe", "https://behpajooh.net/");
         }
     }
 }

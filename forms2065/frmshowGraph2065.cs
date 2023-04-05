@@ -454,7 +454,7 @@ namespace Skydat.forms2065
                 // tChart1.ChartAreas[0].AxisX.MinorTickMark.Enabled = !tChart1.ChartAreas[0].AxisX.MinorTickMark.Enabled;
                 tChart1.ChartAreas[0].AxisX.MajorTickMark.Enabled = !tChart1.ChartAreas[0].AxisX.MajorTickMark.Enabled;
                 tChart1.ChartAreas[0].AxisY.LabelStyle.Enabled = !tChart1.ChartAreas[0].AxisY.LabelStyle.Enabled;
-                //   tChart1.ChartAreas[0].AxisY.MinorTickMark.Enabled = !tChart1.ChartAreas[0].AxisY.MinorTickMark.Enabled;
+                // tChart1.ChartAreas[0].AxisY.MinorTickMark.Enabled = !tChart1.ChartAreas[0].AxisY.MinorTickMark.Enabled;
                 tChart1.ChartAreas[0].AxisY.MajorTickMark.Enabled = !tChart1.ChartAreas[0].AxisY.MajorTickMark.Enabled;
 
                 this.tChart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;

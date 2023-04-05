@@ -414,7 +414,7 @@ namespace Skydat.forms2065
             this.rd_low_cpc.Name = "rd_low_cpc";
             this.rd_low_cpc.TabStop = true;
             this.rd_low_cpc.UseVisualStyleBackColor = false;
-            this.rd_low_cpc.CheckedChanged += new System.EventHandler(this.rd_low_cpc_CheckedChanged);
+
             // 
             // rd_hieght_cpc
             // 

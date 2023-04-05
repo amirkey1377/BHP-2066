@@ -288,7 +288,7 @@ namespace Skydat.forms2065
             // 
             resources.ApplyResources(this.tsbshowd, "tsbshowd");
             this.tsbshowd.ForeColor = System.Drawing.Color.Black;
-            this.tsbshowd.Image = global::Skydat.Properties.Resources.checklist_icon;
+            this.tsbshowd.Image = global::Skydat.Properties.Resources.Data_Sheet;
             this.tsbshowd.Margin = new System.Windows.Forms.Padding(0);
             this.tsbshowd.Name = "tsbshowd";
             this.tsbshowd.Click += new System.EventHandler(this.toolStripButton2_Click);
@@ -296,7 +296,7 @@ namespace Skydat.forms2065
             // tsbsave
             // 
             this.tsbsave.ForeColor = System.Drawing.Color.Black;
-            this.tsbsave.Image = global::Skydat.Properties.Resources.Save;
+            this.tsbsave.Image = global::Skydat.Properties.Resources.flappy;
             resources.ApplyResources(this.tsbsave, "tsbsave");
             this.tsbsave.Name = "tsbsave";
             this.tsbsave.Click += new System.EventHandler(this.tsbsave_Click);
