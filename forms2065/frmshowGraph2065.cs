@@ -409,9 +409,14 @@ namespace Skydat.forms2065
                     case clasglobal.CD:
                         if (double.Parse(dschart1.chartlist1_run.Rows[row][17].ToString()) != 9999) label4.Text = label4.Text + "I1 =" + double.Parse(dschart1.chartlist1_run.Rows[row][17].ToString()) + "\n";
                         if (double.Parse(dschart1.chartlist1_run.Rows[row][18].ToString()) != 9999) label4.Text = label4.Text + "I2 =" + double.Parse(dschart1.chartlist1_run.Rows[row][18].ToString()) + "\n";
+                        if (double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) != 9999) label4.Text = label4.Text + "T1 =" + double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) + "\n";
+                        if (double.Parse(dschart1.chartlist1_run.Rows[row][16].ToString()) != 9999) label4.Text = label4.Text + "T2 =" + double.Parse(dschart1.chartlist1_run.Rows[row][16].ToString()) + "\n";
                         if (double.Parse(dschart1.chartlist1_run.Rows[row][5].ToString()) != 9999) label4.Text = label4.Text + "EUP =" + double.Parse(dschart1.chartlist1_run.Rows[row][5].ToString()) + "\n";
                         if (double.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) != 9999) label4.Text = label4.Text + "EDO =" + double.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) + "\n";
-                        if (double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) != 9999) label4.Text = label4.Text + " Cycles =" + double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) + "\n";
+                        //if (double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) != 9999) label4.Text = label4.Text + " Cycles =" + double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) + "\n";
+
+                        if (double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) != 9999) label4.Text = label4.Text + "T1 =" + double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) + "\n";
+                        if (double.Parse(dschart1.chartlist1_run.Rows[row][16].ToString()) != 9999) label4.Text = label4.Text + "T2 =" + double.Parse(dschart1.chartlist1_run.Rows[row][16].ToString()) + "\n";
                         break;
                 }
                 label4.Text = label4.Text + "comment =" + dschart1.chartlist1_run.Rows[row]["comment"].ToString();
@@ -802,6 +807,7 @@ namespace Skydat.forms2065
             Vold = V;
             flag_running = true;
             byte oinp, oinp1, oinp2, oinp3;
+            serialPort2.DiscardInBuffer();
             for (n = 1; n < 4000000; n++)//تا زمانی که دستور پایان را از دستگاه نگیرد میچرخد
             {
                 if (staterun.Trim() == "stop")
@@ -1097,6 +1103,7 @@ namespace Skydat.forms2065
                 {
                     if (fst) //IF fst TRUE 
                     {
+                        sign = 0;
                         Powr[j] = datas[2];//SAVE IN BUFFER 
                         Crnt[j] = ((datas[0] << 6) | (datas[1] >> 2)); //???
                                                                        // Settxtfill_func(2, $"power={Powr[j]},{oinp}", 2, 1);
@@ -3249,7 +3256,7 @@ namespace Skydat.forms2065
                     dschart1.chartlist1_run.Rows[row][15] = double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) / 1000;
                     dschart1.chartlist1_run.Rows[row][16] = double.Parse(dschart1.chartlist1_run.Rows[row][16].ToString()) / 1000;
                     //dschart1.chartlist1_run.Rows[row][16] = double.Parse(dschart1.chartlist1_run.Rows[row][16].ToString()) / 1000;
-                    dschart1.chartlist1_run.Rows[row][13] = double.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) * 1000;
+                    //dschart1.chartlist1_run.Rows[row][13] = double.Parse(dschart1.chartlist1_run.Rows[row][13].ToString()) * 1000;
                     break;
 
                 case clasglobal.OCP:

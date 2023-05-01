@@ -399,6 +399,7 @@ namespace Skydat.forms2065
             this.pGrid.ViewBackColor = System.Drawing.Color.White;
             this.pGrid.ViewForeColor = System.Drawing.Color.Black;
             this.pGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.pGrid_PropertyValueChanged);
+            this.pGrid.Click += new System.EventHandler(this.pGrid_Click);
             // 
             // dschart1
             // 
@@ -414,7 +415,6 @@ namespace Skydat.forms2065
             this.rd_low_cpc.Name = "rd_low_cpc";
             this.rd_low_cpc.TabStop = true;
             this.rd_low_cpc.UseVisualStyleBackColor = false;
-
             // 
             // rd_hieght_cpc
             // 
