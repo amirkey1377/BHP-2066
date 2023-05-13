@@ -754,7 +754,7 @@ namespace Skydat.forms2065
             // 
             resources.ApplyResources(this.tsbNew, "tsbNew");
             this.tsbNew.ForeColor = System.Drawing.Color.Black;
-            this.tsbNew.Image = global::Skydat.Properties.Resources.New2;
+            this.tsbNew.Image = global::Skydat.Properties.Resources.eraser1;
             this.tsbNew.Margin = new System.Windows.Forms.Padding(0);
             this.tsbNew.Name = "tsbNew";
             this.tsbNew.Click += new System.EventHandler(this.tsbNew_Click);
@@ -763,7 +763,7 @@ namespace Skydat.forms2065
             // 
             resources.ApplyResources(this.tsbOpen, "tsbOpen");
             this.tsbOpen.ForeColor = System.Drawing.Color.Black;
-            this.tsbOpen.Image = global::Skydat.Properties.Resources.Open;
+            this.tsbOpen.Image = global::Skydat.Properties.Resources.OpenNew;
             this.tsbOpen.Margin = new System.Windows.Forms.Padding(0);
             this.tsbOpen.Name = "tsbOpen";
             this.tsbOpen.Click += new System.EventHandler(this.tsbOpen_Click);
@@ -772,7 +772,7 @@ namespace Skydat.forms2065
             // 
             resources.ApplyResources(this.tsbSaveAll, "tsbSaveAll");
             this.tsbSaveAll.ForeColor = System.Drawing.Color.Black;
-            this.tsbSaveAll.Image = global::Skydat.Properties.Resources.Save;
+            this.tsbSaveAll.Image = global::Skydat.Properties.Resources.flappy1;
             this.tsbSaveAll.Name = "tsbSaveAll";
             this.tsbSaveAll.Click += new System.EventHandler(this.tsbSaveAll_Click);
             // 

@@ -234,7 +234,7 @@ namespace Skydat.forms2065
             // 
             resources.ApplyResources(this.tsbRefresh, "tsbRefresh");
             this.tsbRefresh.ForeColor = System.Drawing.Color.Black;
-            this.tsbRefresh.Image = global::Skydat.Properties.Resources.Actions_view_refresh_icon;
+            this.tsbRefresh.Image = global::Skydat.Properties.Resources.refresh;
             this.tsbRefresh.Margin = new System.Windows.Forms.Padding(0);
             this.tsbRefresh.Name = "tsbRefresh";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
@@ -243,7 +243,7 @@ namespace Skydat.forms2065
             // 
             resources.ApplyResources(this.tsbSaveAll, "tsbSaveAll");
             this.tsbSaveAll.ForeColor = System.Drawing.Color.Black;
-            this.tsbSaveAll.Image = global::Skydat.Properties.Resources.Save;
+            this.tsbSaveAll.Image = global::Skydat.Properties.Resources.flappy;
             this.tsbSaveAll.Name = "tsbSaveAll";
             this.tsbSaveAll.Click += new System.EventHandler(this.tsbSaveAll_Click);
             // 
@@ -251,7 +251,7 @@ namespace Skydat.forms2065
             // 
             resources.ApplyResources(this.tsbDelete, "tsbDelete");
             this.tsbDelete.ForeColor = System.Drawing.Color.Black;
-            this.tsbDelete.Image = global::Skydat.Properties.Resources.delete_file_icon;
+            this.tsbDelete.Image = global::Skydat.Properties.Resources.delete1;
             this.tsbDelete.Margin = new System.Windows.Forms.Padding(0);
             this.tsbDelete.Name = "tsbDelete";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
@@ -259,7 +259,7 @@ namespace Skydat.forms2065
             // tsbshowdata
             // 
             this.tsbshowdata.ForeColor = System.Drawing.Color.Black;
-            this.tsbshowdata.Image = global::Skydat.Properties.Resources.checklist_icon;
+            this.tsbshowdata.Image = global::Skydat.Properties.Resources.Data_Sheet;
             resources.ApplyResources(this.tsbshowdata, "tsbshowdata");
             this.tsbshowdata.Name = "tsbshowdata";
             this.tsbshowdata.Click += new System.EventHandler(this.tsbshowdata_Click);

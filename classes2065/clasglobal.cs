@@ -463,8 +463,10 @@ namespace Skydat.classes2065
                     Fl.WriteLine("I2:" + dr[18].ToString());
                     Fl.WriteLine("Vup:" + dr[5].ToString());
                     Fl.WriteLine("Vdo:" + dr[13].ToString());
+                    Fl.WriteLine("T1:" + double.Parse(dr[15].ToString()) * 1000);
+                    Fl.WriteLine("T2:" + double.Parse(dr[16].ToString()) * 1000);
                     Fl.WriteLine("Equilibrium Time:" + dr[7].ToString());
-                    Fl.WriteLine("CYCLE:" + double.Parse(dr[15].ToString()));
+                    // Fl.WriteLine("CYCLE:" + double.Parse(dr[15].ToString()));
                     Fl.WriteLine("Cycles:" + "1"); //caprms.Cycles.ToString());
                     if (typedevice == 2)
                     {

@@ -91,12 +91,9 @@ namespace Skydat.forms2065
 
         }
 
-      
+        private void frmbackgroundset_Load(object sender, EventArgs e)
+        {
 
-        
-       
-      
-
-        
+        }
     }
 }

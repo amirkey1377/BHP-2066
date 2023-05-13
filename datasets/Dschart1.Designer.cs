@@ -2093,8 +2093,8 @@ namespace Skydat.datasets {
                 this.columnFR.DefaultValue = ((string)("0"));
                 this.columnCY.DefaultValue = ((string)("0"));
                 this.columnHT.DefaultValue = ((string)("0"));
-                this.columnT1.DefaultValue = ((string)("0"));
-                this.columnT2.DefaultValue = ((string)("0"));
+                this.columnT1.DefaultValue = ((string)("1"));
+                this.columnT2.DefaultValue = ((string)("1"));
                 this.columnI1.DefaultValue = ((string)("0"));
                 this.columnI2.DefaultValue = ((string)("0"));
                 this.columnvs_OCP.DefaultValue = ((string)("0"));
