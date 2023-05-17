@@ -862,6 +862,11 @@ namespace Skydat.forms2080
             }
         }
 
+        private void tChart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void Calc_V_I1_I2(string VI_endstr, bool show_online,int row)
         {
             Boolean I_sin = true;
@@ -1439,9 +1444,10 @@ namespace Skydat.forms2080
                         Random Random1 = new Random();
                         int Random_Color_Index = 0;
                         Random_Color_Index = (byte)(Random1.NextDouble() * 90);
-                        tChart1.Series[num_Series].Color = clasglobal.color_Graph[Random_Color_Index];
+                        //tChart1.Series[num_Series].Color = clasglobal.color_Graph[Random_Color_Index];
+                        tChart1.Series[num_Series].Color = Color.Red;
 
-                        
+
                         if (!overlaymain)
                         {
                             tChart1.Series[num_Series].Points.Clear();

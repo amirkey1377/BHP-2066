@@ -1504,7 +1504,7 @@ namespace Skydat.forms2065
 
                             }
 
-                        }
+                            }
                         }
                         catch
                         {
@@ -2676,7 +2676,7 @@ namespace Skydat.forms2065
                         Random Random1 = new Random();
                         int Random_Color_Index = 0;
                         Random_Color_Index = (int)(Random1.NextDouble() * 90);
-                        tChart1.Series[num_Series].Color = clasglobal.color_Graph[Random_Color_Index];
+                        tChart1.Series[num_Series].Color = Color.Red;
                         if (!overlaymain)
                         {
                             tChart1.Series[0].Points.Clear();

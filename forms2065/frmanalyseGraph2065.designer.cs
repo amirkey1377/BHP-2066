@@ -199,6 +199,7 @@ namespace Skydat.forms2065
             this.tChart1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tChart1, "tChart1");
             this.tChart1.Name = "tChart1";
+            this.tChart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
             this.tChart1.PostPaint += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs>(this.tChart1_PostPaint);
             this.tChart1.Click += new System.EventHandler(this.tChart1_Click);
             this.tChart1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Chart1_KeyDown);

@@ -45,6 +45,7 @@ namespace Skydat.forms2080
             this.btnshowaxes = new System.Windows.Forms.Button();
             this.tChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
@@ -59,7 +60,6 @@ namespace Skydat.forms2080
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.sp1 = new System.IO.Ports.SerialPort(this.components);
             this.reSize1 = new LarcomAndYoung.Windows.Forms.ReSize(this.components);
-            this.label4 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dschart1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -192,6 +192,7 @@ namespace Skydat.forms2080
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             series1.Name = "Series1";
             this.tChart1.Series.Add(series1);
+            this.tChart1.Click += new System.EventHandler(this.tChart1_Click);
             this.tChart1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tChart1_MouseMove);
             this.tChart1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tChart1_MouseUp);
             // 
@@ -204,6 +205,13 @@ namespace Skydat.forms2080
             this.panel3.Controls.Add(this.treeView3);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            this.label4.ReadOnly = true;
             // 
             // label1
             // 
@@ -299,13 +307,6 @@ namespace Skydat.forms2080
             this.reSize1.InitialHostContainerHeight = 702D;
             this.reSize1.InitialHostContainerWidth = 884D;
             this.reSize1.Tag = null;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            this.label4.ReadOnly = true;
             // 
             // frmshowGraph2080
             // 
