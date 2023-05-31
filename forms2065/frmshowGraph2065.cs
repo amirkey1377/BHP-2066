@@ -808,6 +808,7 @@ namespace Skydat.forms2065
             flag_running = true;
             byte oinp, oinp1, oinp2, oinp3;
             serialPort2.DiscardInBuffer();
+            serialPort2.ReadTimeout = 10000; 
             for (n = 1; n < 4000000; n++)//تا زمانی که دستور پایان را از دستگاه نگیرد میچرخد
             {
                 if (staterun.Trim() == "stop")
@@ -1085,15 +1086,21 @@ namespace Skydat.forms2065
                                     number = 0;
                                     flag_running = true;
                                 }
-
-
+                            }
+                            if (end == 0)
+                            {
+                                serialPort2.DiscardOutBuffer();
+                                serialPort2.Write("next");
+                                serialPort2.DiscardInBuffer();
                             }
 
                         }
                     }
-                    catch
+                    catch(TimeoutException)
                     {
-
+                        serialPort2.Close();
+                        Settxtfill_func(2,"Time out eror happen",2,1);
+                        return;
                     }
 
 
@@ -2672,11 +2679,14 @@ namespace Skydat.forms2065
                     }
                     else
                     {
-                        num_Series = tChart1.Series.Count - 1;
-                        Random Random1 = new Random();
-                        int Random_Color_Index = 0;
-                        Random_Color_Index = (int)(Random1.NextDouble() * 90);
+                        ////Ye seri kar alaki bara rangi kardan line chart :| (keighobadi)
+                        //num_Series = tChart1.Series.Count - 1;
+                        //Random Random1 = new Random();
+                        //int Random_Color_Index = 0;
+                        //Random_Color_Index = (int)(Random1.NextDouble() * 90);
+
                         tChart1.Series[num_Series].Color = Color.Red;
+
                         if (!overlaymain)
                         {
                             tChart1.Series[0].Points.Clear();
@@ -2823,6 +2833,11 @@ namespace Skydat.forms2065
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtcomment_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -5631,6 +5646,10 @@ namespace Skydat.forms2065
             Boolean[] signe = new Boolean[32710];
             int counter=0, number2=0, number=0,sign=0,end=0;
             String string1;
+
+            serialPort2.DiscardInBuffer();
+            serialPort2.ReadTimeout = 10000;
+
             if (((Analiz_St1 > 1) && (double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) * 1000 > 5) && (int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) != 3)) || ((int.Parse(dschart1.chartlist1_run.Rows[row][1].ToString()) == 3) && (double.Parse(dschart1.chartlist1_run.Rows[row][15].ToString()) * 1000 > 20)))
                 slw = true;
             else
@@ -5920,12 +5939,18 @@ namespace Skydat.forms2065
 
 
                             }
-
                         }
+                        serialPort2.Write("next");
+                        serialPort2.DiscardInBuffer();
                     }
-                    catch
+                    catch (TimeoutException)
                     {
-
+                        if (end == 0)
+                        {
+                            serialPort2.DiscardOutBuffer();
+                            serialPort2.Write("next");
+                            serialPort2.DiscardInBuffer();
+                        }
                     }
 
 
