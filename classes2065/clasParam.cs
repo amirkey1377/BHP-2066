@@ -1829,12 +1829,12 @@ namespace Skydat.classes2065
     {
         //private double _Cycles;
         private double _I1;
-        // private double _CYCLE;
         private double _I2;
         private double _EUP;
         private double _EDO;
         private double _T1;
         private double _T2;
+        private double _CYCLE;
         private double _EquilibriumTime;
         private string _comment1;
 
@@ -1864,7 +1864,21 @@ namespace Skydat.classes2065
             }
         }
 
-        [CategoryAttribute("CD Values"), DescriptionAttribute("First step time(S)\n 1    32000")]
+        [CategoryAttribute("cycle Values"), DescriptionAttribute("cycle")]
+        public double CYCLE
+        {
+            get
+            {
+                return _CYCLE;
+            }
+
+            set
+            {
+                _CYCLE = value;
+            }
+        }
+
+            [CategoryAttribute("CD Values"), DescriptionAttribute("First step time(S)\n 1    32000")]
         public double T1
         {
             get
