@@ -1268,6 +1268,7 @@ namespace Skydat.classes2065
         private double _T2;
         private double _EUP;
         private double _EDO;
+        private double _CYCLE;
         private double _EquilibriumTime;
         private string _comment1;
 
@@ -1348,6 +1349,19 @@ namespace Skydat.classes2065
             set
             {
                 _EDO = value;
+            }
+        }
+        [CategoryAttribute("Cycle Values"), DescriptionAttribute("CYCLE")]
+        public double CYCLE
+        {
+            get
+            {
+                return _CYCLE;
+            }
+
+            set
+            {
+                _CYCLE = value;
             }
         }
         [CategoryAttribute("CHP Values"), DescriptionAttribute("Quiescent time before start measuring(S)\n 0    2000")]

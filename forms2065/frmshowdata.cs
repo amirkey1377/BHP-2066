@@ -45,5 +45,10 @@ namespace Skydat.forms2065
 
             catch (Exception ex) { }
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

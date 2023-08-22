@@ -46,5 +46,10 @@ namespace Skydat.forms2065
         {
 
         }
+
+        private void rdbxls_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
