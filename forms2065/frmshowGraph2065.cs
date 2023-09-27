@@ -1,4 +1,4 @@
-﻿using Skydat.classes2065;
+using Skydat.classes2065;
 using System;
 using System.Data;
 using System.Drawing;
