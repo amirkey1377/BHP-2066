@@ -41,6 +41,7 @@
             this.listView1.Size = new System.Drawing.Size(212, 438);
             this.listView1.TabIndex = 0;
             this.listView1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listView1_DrawItem);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // frmshowdata
             // 

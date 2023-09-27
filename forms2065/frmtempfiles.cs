@@ -489,5 +489,10 @@ namespace Skydat.forms2065
         {
 
         }
+
+        private void tChart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

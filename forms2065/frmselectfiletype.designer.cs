@@ -94,6 +94,7 @@
             this.rdbxls.TabIndex = 1;
             this.rdbxls.Text = "excel";
             this.rdbxls.UseVisualStyleBackColor = true;
+            this.rdbxls.CheckedChanged += new System.EventHandler(this.rdbxls_CheckedChanged);
             // 
             // rdbtext
             // 

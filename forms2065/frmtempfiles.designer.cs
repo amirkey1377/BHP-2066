@@ -164,6 +164,7 @@ namespace Skydat.forms2065
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Name = "Series1";
             this.tChart1.Series.Add(series1);
+            this.tChart1.Click += new System.EventHandler(this.tChart1_Click);
             // 
             // panel1
             // 

@@ -911,7 +911,7 @@ namespace Skydat.forms2065
                         if (double.Parse(dschart2.analyselist.Rows[row][5].ToString()) != 9999) str_fillparam = str_fillparam + "Equilibrium Time =" + double.Parse(dschart2.analyselist.Rows[row][5].ToString()) + "\n";
                         //if (double.Parse(dschart2.analyselist.Rows[row][11].ToString()) != 9999) str_fillparam = str_fillparam + "Cycles =" + double.Parse(dschart2.analyselist.Rows[row][11].ToString()) + "\n";
                         break;
-                    case clasglobal.CHA:
+                    case clasglobal.CA:
                         if (double.Parse(dschart2.analyselist.Rows[row][1].ToString()) != 9999) str_fillparam = str_fillparam + "E1 =" + double.Parse(dschart2.analyselist.Rows[row][1].ToString()) + "\n";
                         if (double.Parse(dschart2.analyselist.Rows[row][13].ToString()) != 9999) str_fillparam = str_fillparam + "T1 =" + double.Parse(dschart2.analyselist.Rows[row][13].ToString())  + "\n";
                         if (double.Parse(dschart2.analyselist.Rows[row][2].ToString()) != 9999) str_fillparam = str_fillparam + "E2 =" + double.Parse(dschart2.analyselist.Rows[row][2].ToString()) + "\n";
@@ -960,7 +960,7 @@ namespace Skydat.forms2065
                     case "OCP": Tch = clasglobal.OCP; break;
                     case "CPC": Tch = clasglobal.CPC; break;
                     case "CHP": Tch = clasglobal.CHP; break;
-                    case "CHA": Tch = clasglobal.CHA; break;
+                    case "CHA": Tch = clasglobal.CA; break;
                     case "CHC": Tch = clasglobal.CHC; break;
                     //case "SC": Tch = clasglobal.SC; break;
                     case "CCC": Tch = clasglobal.CCC; break;
